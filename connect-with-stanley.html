@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080a10">
+<title>Connect with Stanley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080a10;--text:#f5f5f7;--muted:#858b9b;--gold:#d8b878}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-height:100%}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;min-height:100svh}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 10%,#20263a,transparent 48%),radial-gradient(ellipse at 0% 80%,#151326,transparent 45%),linear-gradient(145deg,#090b12,#070910 65%,#10131e)}
+.ambient{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(110px);opacity:.15;pointer-events:none;z-index:-1;animation:ambient 18s ease-in-out infinite alternate}
+.ambient.one{background:#8b5cf6;top:-180px;left:-150px}.ambient.two{background:#2563eb;right:-180px;bottom:-180px;animation-delay:-8s}
+@keyframes ambient{to{transform:translate(70px,80px) scale(1.2)}}
+.page{width:100%;max-width:1100px;min-height:100svh;margin:auto;padding:30px 28px 22px;display:flex;flex-direction:column;position:relative}
+nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;letter-spacing:.02em}
+.brand-mark{width:34px;height:34px;border:1px solid rgba(216,184,120,.5);border-radius:11px;display:grid;place-items:center;color:var(--gold);font-size:17px}
+.status{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--muted);letter-spacing:.09em}
+.status-dot{width:7px;height:7px;background:#54d69a;border-radius:50%;box-shadow:0 0 12px #54d69a}
+.hero{text-align:center;padding-top:clamp(45px,8vh,85px);position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.eyebrow::before,.eyebrow::after{content:"";width:22px;height:1px;background:var(--gold)}
+h1{font-family:'Outfit',sans-serif;font-size:clamp(40px,7vw,68px);line-height:1.04;font-weight:500;letter-spacing:-.055em;margin:20px 0 12px}
+h1 span{background:linear-gradient(110deg,#fff 10%,#d9c49c 55%,#a6a9bb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);font-size:14px;line-height:1.7;margin:0 auto;max-width:420px}
+.stage{height:clamp(360px,48vh,500px);width:100%;max-width:950px;margin:0 auto;position:relative}
+#scene{position:absolute;inset:0}
+canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+.stage-label{position:absolute;bottom:12px;left:0;right:0;text-align:center;color:#747c91;font-size:10px;letter-spacing:.17em;text-transform:uppercase;pointer-events:none}
+.social-section{width:100%;max-width:650px;margin:5px auto 0;position:relative;z-index:3}
+.section-heading{text-align:center;color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:17px}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.social-card{text-decoration:none;color:var(--text);border:1px solid rgba(255,255,255,.1);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.018));border-radius:17px;padding:17px 13px;display:flex;align-items:center;gap:12px;transition:.3s ease;backdrop-filter:blur(16px)}
+.social-card:hover{transform:translateY(-5px);border-color:rgba(216,184,120,.5);background:rgba(255,255,255,.09)}
+.social-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
+.instagram{background:linear-gradient(135deg,#833ab4,#fd5949,#fccc63)}.whatsapp{background:#167c54}.snapchat{background:#e6d800;color:#171717}
+.social-info{min-width:0}.social-info strong{display:block;font-size:12px;font-weight:600}.social-info span{display:block;color:var(--muted);font-size:10px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arrow{margin-left:auto;color:var(--muted)}
+footer{margin-top:auto;padding-top:30px;display:flex;justify-content:space-between;color:#697084;font-size:10px;letter-spacing:.04em}
+.footer-credit{color:var(--gold)}
+@media(max-width:600px){.page{padding:22px 19px 18px}.hero{padding-top:60px}h1{font-size:43px}.subtitle{font-size:12px}.stage{height:370px;margin-top:8px}.social-grid{gap:8px}.social-card{padding:13px 8px;flex-direction:column;align-items:flex-start;gap:9px;border-radius:14px}.social-icon{width:36px;height:36px}.social-info strong{font-size:11px}.social-info span{font-size:9px}.arrow{display:none}footer{font-size:9px;padding-top:35px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="ambient one"></div><div class="ambient two"></div>
+<main class="page">
+<nav>
+  <div class="brand"><div class="brand-mark">S.</div><span>STANLEY</span></div>
+  <div class="status"><span class="status-dot"></span>DIGITAL PRESENCE</div>
+</nav>
+<section class="hero">
+  <div class="eyebrow">Your digital connection</div>
+  <h1>Connect with<br><span>Stanley.</span></h1>
+  <p class="subtitle">One place. Every connection. Explore my social world and let's stay connected.</p>
+</section>
+<section class="stage"><div id="scene"></div><div class="stage-label">Drag to explore · Tap an orb to connect</div></section>
+<section class="social-section">
+  <div class="section-heading">Find me across platforms</div>
+  <div class="social-grid">
+    <a class="social-card" href="https://www.instagram.com/big_stunn3r?obrf=ZnFpMTUwYXo2NGo1" target="_blank" rel="noopener noreferrer">
+      <div class="social-icon instagram">◎</div><div class="social-info"><strong>Instagram</strong><span>@big_stunn3r</span></div><span class="arrow">↗</span>
+    </a>
+    <a class="social-card" href="https://wa.me/233593787699" target="_blank" rel="noopener noreferrer">
+      <div class="social-icon whatsapp">◉</div><div class="social-info"><strong>WhatsApp</strong><span>Let's chat</span></div><span class="arrow">↗</span>
+    </a>
+    <a class="social-card" href="https://www.snapchat.com/add/braimah_stanley" target="_blank" rel="noopener noreferrer">
+      <div class="social-icon snapchat">👻</div><div class="social-info"><strong>Snapchat</strong><span>braimah_stanley</span></div><span class="arrow">↗</span>
+    </a>
+  </div>
+</section>
+<footer><span>© 2026 STANLEY</span><span class="footer-credit">MADE TO CONNECT.</span></footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
+<script>
+(() => {
+const mount=document.getElementById('scene');
+if(!window.THREE||!THREE.OrbitControls){mount.innerHTML='<p style="text-align:center;color:#858b9b;padding-top:100px">3D experience unavailable. Use the links below.</p>';return}
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(42,1,.1,100);
+camera.position.set(0,.5,9);
+const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
+renderer.outputEncoding=THREE.sRGBEncoding;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.25;
+mount.appendChild(renderer.domElement);
+function resize(){const w=mount.clientWidth,h=mount.clientHeight;if(!w||!h)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)}
+resize();window.addEventListener('resize',resize);
+scene.add(new THREE.AmbientLight(0x9aa7d0,1.2));
+const key=new THREE.DirectionalLight(0xffffff,3);key.position.set(4,6,6);scene.add(key);
+const purple=new THREE.PointLight(0x875cff,5,20);purple.position.set(-4,2,-2);scene.add(purple);
+const blue=new THREE.PointLight(0x328dff,4,20);blue.position.set(4,-2,3);scene.add(blue);
+const gold=new THREE.PointLight(0xd8b878,3,18);gold.position.set(0,4,2);scene.add(gold);
+function makeEnvironment(){
+  const pmrem=new THREE.PMREMGenerator(renderer),envScene=new THREE.Scene();
+  envScene.background=new THREE.Color(0x11172a);
+  [[0x8a6cff,3,-5,3,4],[0x6daaff,3,5,2,-4],[0xffd7a0,2,0,5,3]].forEach(([color,intensity,x,y,z])=>{const l=new THREE.PointLight(color,intensity,30);l.position.set(x,y,z);envScene.add(l)});
+  const env=pmrem.fromScene(envScene).texture;pmrem.dispose();return env;
+}
+scene.environment=makeEnvironment();
+const ground=new THREE.Mesh(new THREE.CircleGeometry(6,64),new THREE.MeshBasicMaterial({color:0x171d30,transparent:true,opacity:.18}));
+ground.rotation.x=-Math.PI/2;ground.position.y=-2;scene.add(ground);
+const starCount=450,positions=new Float32Array(starCount*3);
+for(let i=0;i<starCount;i++){const r=5+Math.random()*9,a=Math.random()*Math.PI*2,b=Math.acos(2*Math.random()-1);positions[i*3]=r*Math.sin(b)*Math.cos(a);positions[i*3+1]=r*Math.cos(b);positions[i*3+2]=r*Math.sin(b)*Math.sin(a)}
+const starGeo=new THREE.BufferGeometry();starGeo.setAttribute('position',new THREE.BufferAttribute(positions,3));
+const stars=new THREE.Points(starGeo,new THREE.PointsMaterial({color:0xaab4d6,size:.025,transparent:true,opacity:.55}));scene.add(stars);
+function roundedRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+function makeIcon(type){
+  const canvas=document.createElement('canvas');canvas.width=canvas.height=512;const ctx=canvas.getContext('2d');
+  ctx.fillStyle={instagram:'#17131d',whatsapp:'#075c3d',snapchat:'#e6dc00'}[type];ctx.fillRect(0,0,512,512);
+  if(type==='instagram'){const grad=ctx.createLinearGradient(80,430,430,80);grad.addColorStop(0,'#feda75');grad.addColorStop(.4,'#fa7e1e');grad.addColorStop(.7,'#d62976');grad.addColorStop(1,'#4f5fde');ctx.strokeStyle=grad;ctx.lineWidth=28;roundedRect(ctx,100,100,312,312,85);ctx.stroke();ctx.beginPath();ctx.arc(256,256,86,0,Math.PI*2);ctx.stroke();ctx.fillStyle=grad;ctx.beginPath();ctx.arc(350,162,17,0,Math.PI*2);ctx.fill()}
+  if(type==='whatsapp'){ctx.strokeStyle='#fff';ctx.lineWidth=27;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.arc(256,235,142,.7,Math.PI*2-.7);ctx.stroke();ctx.beginPath();ctx.moveTo(158,342);ctx.lineTo(125,407);ctx.lineTo(202,380);ctx.stroke();ctx.lineWidth=34;ctx.beginPath();ctx.moveTo(190,202);ctx.quadraticCurveTo(205,278,316,307);ctx.stroke();ctx.beginPath();ctx.arc(181,200,24,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.arc(325,307,22,0,Math.PI*2);ctx.stroke()}
+  if(type==='snapchat'){ctx.fillStyle='#151515';ctx.beginPath();ctx.moveTo(256,95);ctx.bezierCurveTo(356,95,390,170,377,230);ctx.bezierCurveTo(413,250,403,287,372,293);ctx.bezierCurveTo(361,335,326,355,300,355);ctx.quadraticCurveTo(280,395,256,395);ctx.quadraticCurveTo(232,395,212,355);ctx.bezierCurveTo(182,355,147,335,136,293);ctx.bezierCurveTo(105,287,99,250,135,230);ctx.bezierCurveTo(122,170,156,95,256,95);ctx.closePath();ctx.fill();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(210,230,14,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(302,230,14,0,Math.PI*2);ctx.fill()}
+  const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;return texture;
+}
+const icons={instagram:makeIcon('instagram'),whatsapp:makeIcon('whatsapp'),snapchat:makeIcon('snapchat')};
+const group=new THREE.Group();scene.add(group);const orbs=[];
+function makeOrb(type,x,url){
+  const g=new THREE.Group();
+  const sphere=new THREE.Mesh(new THREE.SphereGeometry(1.12,96,96),new THREE.MeshPhysicalMaterial({map:icons[type],roughness:.16,metalness:.08,clearcoat:1,clearcoatRoughness:.04,envMapIntensity:1.8}));
+  sphere.castShadow=true;sphere.receiveShadow=true;g.add(sphere);
+  const shell=new THREE.Mesh(new THREE.SphereGeometry(1.19,96,96),new THREE.MeshPhysicalMaterial({color:0xffffff,metalness:0,roughness:.06,transmission:.12,thickness:.7,ior:1.45,transparent:true,opacity:.22,clearcoat:1,clearcoatRoughness:.02,envMapIntensity:2}));g.add(shell);
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(1.38,.012,12,128),new THREE.MeshBasicMaterial({color:type==='instagram'?0xd66cbb:type==='whatsapp'?0x38e99b:0xf8e900,transparent:true,opacity:.75}));ring.rotation.x=Math.PI/2.5;g.add(ring);
+  const ring2=new THREE.Mesh(new THREE.TorusGeometry(1.48,.006,8,128),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.22}));ring2.rotation.y=Math.PI/2.3;ring2.rotation.x=.4;g.add(ring2);
+  const glow=new THREE.Mesh(new THREE.SphereGeometry(1.42,32,32),new THREE.MeshBasicMaterial({color:type==='instagram'?0xd62976:type==='whatsapp'?0x25d366:0xfffc00,transparent:true,opacity:.055,side:THREE.BackSide}));g.add(glow);
+  g.position.set(x,0,0);g.userData={url,type,phase:Math.random()*Math.PI*2,sphere,ring,ring2,glow};group.add(g);orbs.push(g);
+}
+makeOrb('instagram',-2.85,'https://www.instagram.com/big_stunn3r?obrf=ZnFpMTUwYXo2NGo1');
+makeOrb('whatsapp',0,'https://wa.me/233593787699');
+makeOrb('snapchat',2.85,'https://www.snapchat.com/add/braimah_stanley');
+const controls=new THREE.OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=.06;controls.enablePan=false;controls.minDistance=6.5;controls.maxDistance=12;controls.rotateSpeed=.55;controls.target.set(0,0,0);
+const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let pointerDown=null;
+renderer.domElement.addEventListener('pointerdown',e=>{pointerDown={x:e.clientX,y:e.clientY}});
+renderer.domElement.addEventListener('pointerup',e=>{
+  if(!pointerDown)return;const distance=Math.hypot(e.clientX-pointerDown.x,e.clientY-pointerDown.y);pointerDown=null;if(distance>8)return;
+  const rect=renderer.domElement.getBoundingClientRect();pointer.x=((e.clientX-rect.left)/rect.width)*2-1;pointer.y=-((e.clientY-rect.top)/rect.height)*2+1;
+  raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObjects(orbs.map(o=>o.userData.sphere));
+  if(hits.length){const selected=hits[0].object.parent;window.open(selected.userData.url,'_blank','noopener,noreferrer')}
+});
+const clock=new THREE.Clock();
+function animate(){
+  requestAnimationFrame(animate);const t=clock.getElapsedTime();stars.rotation.y=t*.012;
+  orbs.forEach((g,i)=>{const d=g.userData,p=d.phase;g.position.y=Math.sin(t*.7+p)*.30;g.rotation.y=t*.22+i;g.rotation.x=Math.sin(t*.4+p)*.08;g.scale.setScalar(1+Math.sin(t*1.1+p)*.018);d.ring.rotation.z=t*.2+i;d.ring2.rotation.y=t*.18+i;d.glow.scale.setScalar(1+Math.sin(t*1.5+p)*.035)});
+  controls.update();renderer.render(scene,camera);
+}
+animate();
+})();
+</script>
+</body>
+</html>
